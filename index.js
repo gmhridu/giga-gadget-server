@@ -19,7 +19,7 @@ app.use(express.json());
 
 // routes
 app.use('/addProducts', addProductRouter);
-app.use('/myproduct', myProductRouter);
+app.use('/myproducts', myProductRouter);
 
 app.use("*", (req, res) => {
   res.status(404).json({ error: "Not found" });

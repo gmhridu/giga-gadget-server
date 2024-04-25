@@ -3,6 +3,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const addProductRouter = require('./routes/addProduct.route');
 const ConnectDB = require('./db/db');
+const myProductRouter = require('./routes/myProduct.route');
 
 dotenv.config();
 const port = process.env.PORT || 3000;
@@ -17,7 +18,8 @@ app.use(express.json());
 
 
 // routes
-app.use('/addProducts', addProductRouter)
+app.use('/addProducts', addProductRouter);
+app.use('/myproduct', myProductRouter);
 
 app.use("*", (req, res) => {
   res.status(404).json({ error: "Not found" });

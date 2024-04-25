@@ -41,6 +41,8 @@ const getSingleProduct = async (req, res) => {
   }
 }
 
+
+
 // update product by id
 
 const updateProduct = async (req, res) => {
